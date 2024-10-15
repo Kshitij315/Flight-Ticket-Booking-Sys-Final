@@ -4,6 +4,7 @@ import UserService from '../../services/UserService';
 import Swal from 'sweetalert2';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Link, useNavigate } from 'react-router-dom';
+import '../../css/Login.css';
 
 const LoginSchema = Yup.object().shape({
     username: Yup.string().required("Username is required"),
@@ -41,17 +42,15 @@ export default function Login(props) {
         <div className='home'>
             <div >
                 <div className='row'>
-                    <div>
-                        <div>Login</div>
-                    </div>
+                    
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
+                    <div className='main-content'>
+                                    <div class="login-container">
                                     <div>
-                                        <div>
+                        <h1>
+                            Login
+                        </h1>
+                                    </div>
                                             <Formik initialValues={{
                                                 username: "",
                                                 password: ""
@@ -60,16 +59,16 @@ export default function Login(props) {
                                                 onSubmit={handleSubmit}
                                             >
                                                 {({ isSubmitting }) => (
-                                                    <Form>
+                                                    <Form id ="loginForm">
                                                         <div className='form-group'>
-                                                            <h6>
-                                                                <span className='form-label'>Username</span>
-                                                            </h6>
+                                                            <label className='my-label' htmlFor="Username">Username</label>
                                                             <Field
                                                                 type="text"
                                                                 name="username"
                                                                 placeholder="Enter your Username"
                                                                 className="form-control"
+
+                                                                
                                                             />
                                                             <ErrorMessage
                                                                 name='username'
@@ -77,11 +76,10 @@ export default function Login(props) {
                                                                 className='text-danger'
                                                             />
                                                         </div>
+                                                        
                                                         <div className='form-group'>
-                                                            <h6>
-                                                                <span className='form-label'>Password</span>
-                                                            </h6>
-                                                            <Field
+                                                        <label className='my-label' htmlFor="Username">Password</label>
+                                                            <Field 
                                                                 type="password"
                                                                 name="password"
                                                                 placeholder="Enter your Password"
@@ -93,8 +91,16 @@ export default function Login(props) {
                                                                 className='text-danger'
                                                             />
                                                         </div>
+                                                        <div class="remember-forgot">
+                                                 <Link to="/forgetPassword">
+                                                    
+                                                <a  href="#">Forgot password</a>
+                                       
+                                                </Link>
+                                                </div>
+
                                                         <div className='card-footer'>
-                                                            <button
+                                                            <button class='login-btn'
                                                                 type='submit'
                                                             >Login</button>
                                                         </div>
@@ -105,28 +111,26 @@ export default function Login(props) {
                                     </div>
                                 </div>
                                 <div>
-                                    <div>
-                                        <Link className='card-link' to="/register">
-                                            <button type='button'>
-                                                New User? Register Now!
-                                            </button>
-                                        </Link>
-                                    </div>
+                                    
+                                       
+                                        <div class="signup-link">
+                                            Don't have an account? &nbsp;
+                                            <Link className='card-link' to="/register">
+                                             <a href="#">Sign up</a>
+                                             </Link>
+                                           </div> 
+                                      
+                                    
                                 </div>
                                 <div>
                                     <div>
-                                        <Link to="/forgetPassword">
-                                            <button type='button'>
-                                                Forget-Password
-                                            </button>
-                                        </Link>
+                                   
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                       
+            
+        
     )
 }
+

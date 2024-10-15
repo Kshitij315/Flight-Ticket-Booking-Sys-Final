@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { send } from 'emailjs-com';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import '../../css/Register.css';
 
 const RegisterSchema = Yup.object().shape({
     fname: Yup.string().required("Full name is required"),
@@ -48,14 +49,14 @@ export default function Register(props) {
 
     return (
         <div className='home'>
-            <div>
                 <div>
-                    <div>
+                    <div className='main-content'>
+                    <div class='register-container'>
                         <h1>
-                            <b>Registration</b>
+                            Create an account
                         </h1>
-                    </div>
-                </div>
+                   
+                
                 <div>
                     <Formik initialValues={{
                         fname: "",
@@ -83,91 +84,111 @@ export default function Register(props) {
                         }}
                     >
                         {({ values, isSubmitting, errors, touched, handleChange }) => (
-                            <Form>
+                            <Form id='registerForm'>
                                 <div>
-                                    <h6>
-                                        <span>Name</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='name'>Full Name</label>
+                                    
+
+                                    
                                     <Field
                                         type="text"
                                         name="fname"
                                         placeholder="Enter Your Full Name"
+                                        className="form-control"
+
                                     />
                                     <ErrorMessage name='fname' component="div" />
                                 </div>
                                 <div>
-                                    <h6>
-                                        <span>Email</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='Email'>Email</label>
+                                        
+                                    
                                     <Field
                                         type="email"
                                         name="email"
                                         placeholder="Enter Your Email"
+                                        className="form-control"
+
                                     />
                                     <ErrorMessage name='email' component="div" />
                                 </div>
                                 <div>
-                                    <h6>
-                                        <span>Mobile Number</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='Mobile-Number'>Mobile No.</label>
+                                        
+                                    
                                     <Field
                                         name="phone"
                                         pattern="[6-9][0-9]{9}"
                                         maxLength="10"
+                                        placeholder="Enter Your Mobile Number"
+                                        className="form-control"
+
                                     />
                                     <ErrorMessage name='phone' component="div" />
                                 </div>
                                 <div>
-                                    <h6>
-                                        <span >Username</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='Username'>Username</label>
+                                        
+                                    
                                     <Field
                                         type="text"
                                         name="username"
                                         placeholder="Enter Your Username"
+                                        className="form-control"
+
                                     />
                                     <ErrorMessage name='username' component="div" />
                                 </div>
                                 <div>
-                                    <h6>
-                                        <span>Password</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='Password'>Password</label>
+                                        
+                                    
                                     <Field
                                         type="password"
                                         name="password"
                                         placeholder="Enter your Password"
+                                        className="form-control"
+
                                     />
                                     <ErrorMessage name='password' component="div" />
                                 </div>
                                 <div>
-                                    <h6>
-                                        <span >Confirm Password</span>
-                                    </h6>
+                                <label className='my-label-new' htmlFor='Confirm Password'>Confirm Password</label>
+                                        
+                                    
                                     <Field
                                         type="password"
                                         name="cpasswd"
                                         onChange={handleChange}
                                         placeholder="Enter Confirm Password"
+                                        className="form-control"
+
                                     />
                                     {errors.cpasswd && touched.cpasswd && (
                                         <div>{errors.cpasswd}</div>
                                     )}
                                 </div>
-                                <div>
-                                    <button
-                                        type='submit'
-                                    >
-                                        <h2>Register</h2>
-                                    </button>
-                                </div>
+                                <div className='card-footer'>
+                                                            <button class='login-btn'
+                                                                type='submit'
+                                                            >Login</button>
+                                                            </div>
                             </Form>
                         )}
                     </Formik>
                 </div>
-            </div>
-            <div>
-                <div><Link to="/login"><button type='button'>Already registered? Login Now!</button></Link></div>
-            </div>
-        </div>
+                </div>
+                </div>
+                 </div>
+            
+             <div class='login-link'>
+                 Already registered? 
+                <Link to="/login">
+                
+              <a href='#'> Login Now</a> 
+                </Link>
+    </div>
+    </div>
+
     )
 }

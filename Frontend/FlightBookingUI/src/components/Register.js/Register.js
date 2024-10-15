@@ -160,7 +160,7 @@ export default function Register(props) {
                                         type="password"
                                         name="cpasswd"
                                         onChange={handleChange}
-                                        placeholder="Enter Confirm Password"
+                                        placeholder="Confirm Your Password"
                                         className="form-control"
 
                                     />
@@ -171,7 +171,7 @@ export default function Register(props) {
                                 <div className='card-footer'>
                                                             <button class='login-btn'
                                                                 type='submit'
-                                                            >Login</button>
+                                                            >Sign up</button>
                                                             </div>
                             </Form>
                         )}

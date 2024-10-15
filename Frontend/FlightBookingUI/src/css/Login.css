@@ -50,11 +50,11 @@ h1 {
     margin-top: 15px;
     font-size: 14px;
 }
-a {
+.signup-link a {
     color: #4285f4;
     text-decoration: none;
 }
-a:hover {
+.signup-link a:hover {
     color: #357ae8;
     text-decoration: underline;
 }

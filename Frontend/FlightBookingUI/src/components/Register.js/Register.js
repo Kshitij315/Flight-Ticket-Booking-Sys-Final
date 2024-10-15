@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { send } from 'emailjs-com';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import '../../css/Register.css';
+import './Register.css';
 
 const RegisterSchema = Yup.object().shape({
     fname: Yup.string().required("Full name is required"),

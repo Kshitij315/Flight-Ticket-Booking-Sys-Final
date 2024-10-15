@@ -4,7 +4,7 @@ import UserService from '../../services/UserService';
 import Swal from 'sweetalert2';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Link, useNavigate } from 'react-router-dom';
-import '../../css/Login.css';
+import './Login.css';
 
 const LoginSchema = Yup.object().shape({
     username: Yup.string().required("Username is required"),

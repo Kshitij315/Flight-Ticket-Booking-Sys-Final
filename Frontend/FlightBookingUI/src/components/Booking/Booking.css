@@ -1,0 +1,59 @@
+.booking-container {
+    background-color: white;
+    padding: 40px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 1em;
+    margin-bottom: 2em ;
+}
+
+.form-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4285f4;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #000000;
+    padding-right: 100%;
+    white-space: nowrap;
+}
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-class{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(61, 92, 184);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button-class:hover{
+    background-color: rgb(51, 76, 153);
+}
+.form-label{
+    font-size: 13px;
+    color: #000000;
+    padding-right: 100%;
+    white-space: nowrap;
+
+}

@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useRef, useState } from 'react'
 import BookingService from '../../services/BookingService';
 import { useNavigate } from 'react-router-dom';
+import './Booking.css';
 
 export default function Booking(props) {
     const history = useNavigate();
@@ -74,18 +75,15 @@ export default function Booking(props) {
 
     return (
         <div className='home'>
-            <div>
+            <div className="main-content">
+            <div className="booking-container"> 
+            <h1 class="form-title">Book your tickets</h1>
                 <div>
-                    <div>
-                        <h1>Book My Flight</h1>
-                    </div>
                 </div>
                 <div>
-                    <form>
+                    <form id ="bookingForm">
                         <div>
-                            <h6>
-                                <span>Flight Number</span>
-                            </h6>
+                           <label  htmlFor='flightNumber'>Flight No.</label>
                             <input
                                 type="text"
                                 onChange={handleInput}
@@ -96,9 +94,7 @@ export default function Booking(props) {
                             />
                         </div>
                         <div>
-                            <h6>
-                                <span>Flying from</span>
-                            </h6>
+                        <label htmlFor='flightSource'>Flight Source</label>
                             <input
                                 type="text"
                                 onChange={handleInput}
@@ -109,9 +105,7 @@ export default function Booking(props) {
                             />
                         </div>
                         <div>
-                            <h6>
-                                <span>Flying to</span>
-                            </h6>
+                        <label htmlFor='flightDestination'>Flight Destination</label>
                             <input
                                 type="text"
                                 onChange={handleInput}
@@ -122,9 +116,8 @@ export default function Booking(props) {
                             />
                         </div>
                         <div>
-                            <h6>
-                                <span>Departing</span>
-                            </h6>
+                        <label htmlFor='flightDestination'>Flight Destination</label>
+
                             <input
                                 type="text"
                                 onChange={handleInput}
@@ -138,7 +131,7 @@ export default function Booking(props) {
                             <div className="col-md-12">
                                 <div className="form-group">
                                     <span className="form-label">
-                                        Number of Passenger
+                                        Total Passengers
                                     </span>
                                     {flag && (state.passengers && state.passengers.length > 0) && (
                                         < select
@@ -158,20 +151,24 @@ export default function Booking(props) {
                             </div>
                         </div>
                         <div className="card-footer">
+                            <div className='button-class'>
                             <button
                                 onClick={goOnPassangers}
                                 type="button"
-                                className="subscribe btn btn-primary btn-block shadow-sm"
-                            >
+                                className="btn btn-primary"
+                            >   
                                 {" "}
                                 Book Ticket
                             </button>
+                            </div>
                         </div>
                     </form>
-
+                    </div>
+                </div>
                 </div>
             </div >
-        </div >
+            
+        
     )
 }
 

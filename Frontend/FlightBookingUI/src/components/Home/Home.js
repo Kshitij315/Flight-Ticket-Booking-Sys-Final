@@ -11,13 +11,8 @@ import Travelers from "../Travelers/Travelers";
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
-const Home = () => {
-
-    useEffect(() => {
-        Aos.init({ duration: 2000 })
-    }, [])
-
+                                                                                    
+function Home(){
     return (
         <>
             <div className='home flex container'>
@@ -43,5 +38,6 @@ const Home = () => {
         </>
     )
 }
+
 
 export default Home

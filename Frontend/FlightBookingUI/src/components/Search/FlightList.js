@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react'
 import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column';
 import 'primereact/resources/themes/md-light-indigo/theme.css'
-import './flightlist.css';
+// import './flightlist.css';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+// import printstyle from 'flightlist.module.css'
 
 export default function FlightList(props) {
     const history = useNavigate();

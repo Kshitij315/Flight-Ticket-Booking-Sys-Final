@@ -45,6 +45,7 @@ input[type="text"], input[type="date"], select {
     border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
+    
 }
 
 .button-class:hover{

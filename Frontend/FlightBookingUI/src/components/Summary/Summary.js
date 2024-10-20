@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import './Summary.css'
 
 export default function Summary() {
     const [summary, setSummary] = useState([]);
@@ -70,7 +71,7 @@ export default function Summary() {
                                                 {summary.length > 0 && airplane && (
                                                     <>
                                                         <table className="table">
-                                                            <caption>Passenger Details</caption>
+                                                            <caption >Passenger Details</caption>
                                                             <thead>
                                                                 <tr>
                                                                     <th>Name</th>
@@ -81,8 +82,17 @@ export default function Summary() {
                                                             <tbody>
                                                                 {passList}
                                                             </tbody>
+                                                            <tbody>
+                                                            <tr>
+                                                            <td>
+                                                                
+                                                            <label>Flight Details</label>
 
-                                                            <thead><tr><th>Travelling Details</th></tr></thead>
+                                                            </td>
+                                                            </tr>
+                                                            </tbody>
+                                                            
+                                                           
                                                             <thead>
                                                                 <tr>
                                                                     <th>Flight No.</th>
@@ -109,7 +119,7 @@ export default function Summary() {
                                                         </table>
                                                         <div className="card-footer">
                                                             <Link to="/payment">
-                                                                <button type="button" className="subscribe btn btn-primary btn-block shadow-sm">
+                                                                <button type="button" className="subscribe btn btn-primary btn-block shadow-sm" >
                                                                     Make Payment
                                                                 </button>
                                                             </Link>

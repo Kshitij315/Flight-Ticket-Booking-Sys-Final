@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BookingService from '../../services/BookingService';
-
+import ReactToPrint, { useReactToPrint } from 'react-to-print';
 import * as Yup from 'yup';
-import './Passengers.module.css';
+import './Passengers.css';
 
 import { ErrorMessage, Field, FieldArray, Form, Formik } from 'formik';
 
 const passengerSchema = Yup.object().shape({
     elements: Yup.array().of(
         Yup.object().shape({
-            pname: Yup.string().min(3).required('Name is required'),
+            pname: Yup.string().min(3, 'Name must be at least 3 characters').required('Required'),
             gender: Yup.string().notOneOf(['Select'], 'Please select a gender').required('Gender is required'),
             age: Yup.number().required('Age is required').positive('Age must be a positive number').integer('Age must be an integer').max(100, 'Plz! Enter valid age')
         })
@@ -42,19 +42,30 @@ export default function Passengers() {
         service.addPassengers({ "pass1": v.elements })
             .then(() => history("/summary"));
     };
+// react hook for react -to-print
+    
+    const contentRef = useRef(null);
+    const reactToPrintfn = useReactToPrint({
+        contentRef
+    });
+
+    const assignId = (element, index) => {
+    element.id = index + 1; // Assigning ID here
+};
+
 
     return (
         <div className='home'>
-            <h1>
+            <h1 className='form-title'>
                 Add Passenger Details
             </h1>
             <div>
                 <div className='passenger-container'>
                     <div>
-                        <div>
+                        <div className='main-content'>
                             <div>
                                 <div>
-                                    <Formik
+                                    <Formik 
                                         initialValues={{
                                             elements: Array(npsgn).fill({
                                                 id: '',
@@ -68,7 +79,7 @@ export default function Passengers() {
                                     >
                                         {
                                             ({ values }) => (
-                                                <Form>
+                                                <Form id="form-container">
                                                     <table>
                                                         <thead>
                                                             <tr>
@@ -79,14 +90,14 @@ export default function Passengers() {
                                                             </tr>
                                                         </thead>
 
-                                                        <FieldArray
+                                                        <FieldArray 
                                                             name='elements'
                                                             render={arrayHelpers => (
                                                                 <tbody>
                                                                     {values.elements && values.elements.length > 0 ? (
                                                                         values.elements.map((elements, index) => (
                                                                             <tr key={index}>
-                                                                                {elements.id = index + 1}
+                                                                                {elements.id= index + 1}
                                                                                 <td><Field name={`elements[${index}].pname`} type="text" /><ErrorMessage name={`elements[${index}].pname`} component="div" /></td>
                                                                                 <td><Field name={`elements[${index}].gender`} as="select">
                                                                                     <option value="Male">Male</option>
@@ -94,7 +105,7 @@ export default function Passengers() {
                                                                                     <option value="Other">Other</option>
                                                                                 </Field>
                                                                                     <ErrorMessage name={`elements[${index}].gender`} component="div" /></td>
-                                                                                <td><Field name={`elements[${index}].age`} type="number" /><ErrorMessage name={`elements[${index}].age`} component="div" /></td>
+                                                                                <td><Field name={`elements[${index}].age`} type="number"/><ErrorMessage name={`elements[${index}].age`} component="div" /></td>
                                                                             </tr>
                                                                         ))
                                                                     ) : (<div>No Passenger</div>)

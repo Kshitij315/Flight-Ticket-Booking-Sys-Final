@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column';
 import 'primereact/resources/themes/md-light-indigo/theme.css'
-// import './flightlist.css';
+import './flightlist.css';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import React from 'react'

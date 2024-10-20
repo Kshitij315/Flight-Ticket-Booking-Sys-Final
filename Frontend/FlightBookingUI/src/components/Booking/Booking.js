@@ -3,6 +3,7 @@ import BookingService from '../../services/BookingService';
 import { useNavigate } from 'react-router-dom';
 import './Booking.css';
 
+
 export default function Booking(props) {
     const history = useNavigate();
     const service = new BookingService();

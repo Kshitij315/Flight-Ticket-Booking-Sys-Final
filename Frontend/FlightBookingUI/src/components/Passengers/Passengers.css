@@ -1,0 +1,37 @@
+.passenger-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin:auto;
+   
+}
+.form-title{
+    color: #333;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+             margin-top: 0;
+            margin-bottom: 30px; 
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4285f4;
+     
+}
+
+/* .main-content{
+         background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+} */
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-.container h4{
+.summary-container h4{
     color: #333;
     font-size: 28px;
     font-weight: bold;
@@ -40,7 +40,7 @@ font-weight: bold;
 padding-top:1em;
 
 }
-.card-footer button {
+.card-footer .subscribe{
 
     opacity: 1; /* Ensure it is fully visible */
     visibility: visible; /* Ensure it is visible */

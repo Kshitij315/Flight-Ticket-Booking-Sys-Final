@@ -58,7 +58,7 @@ export default function Summary() {
                                 <div className="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
                                     <div className="tab-content">
                                         <div className="tab-pane fade show active pt-3">
-                                            <div className="container">
+                                            <div className="summary-container">
                                                 <h4 align="center">Booking Summary</h4>
 
                                                 <br />

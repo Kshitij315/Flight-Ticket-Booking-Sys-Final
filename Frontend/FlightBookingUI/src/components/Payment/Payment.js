@@ -5,6 +5,7 @@ import { FaCcAmex, FaCcMastercard, FaCcVisa } from 'react-icons/fa6';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
+import './Payment.css'
 
 export default function Payment() {
     const [ticketNumber, setticketNumber] = useState(0);
@@ -32,7 +33,7 @@ export default function Payment() {
     };
     return (
         <div className='home'>
-            <div>
+            <div className="payment-container">
                 <h4>Confirm Payment</h4>
                 <div>
                     <span><h6>CREDIT/DEBIT CARD</h6></span>
@@ -42,7 +43,7 @@ export default function Payment() {
                     <FaCcVisa />
                     <FaCcAmex />
                 </div>
-            </div>
+            
             <Formik
                 initialValues={{
                     cnumber: '',
@@ -115,6 +116,7 @@ export default function Payment() {
                     </Form>
                 )}
             </Formik>
+        </div>
         </div>
 
     )

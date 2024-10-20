@@ -1,0 +1,19 @@
+.payment-container {
+
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 1em;
+    margin-bottom: 2em ;
+    align-items: center;
+}
+
+.payment-container h4{
+
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}

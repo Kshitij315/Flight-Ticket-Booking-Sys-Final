@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BookingService from '../../services/BookingService';
+
 import * as Yup from 'yup';
+import './Passengers.module.css';
 
 const passengerSchema = Yup.object().shape(
     {
@@ -10,6 +12,11 @@ const passengerSchema = Yup.object().shape(
         age: Yup.number().required('Age is required').positive('Age must be a positive number').integer('Age must be an integer')
     }
 );
+
+
+
+
+
 
 export default function Passengers() {
 
@@ -105,7 +112,7 @@ export default function Passengers() {
                 Add Passenger Details
             </h1>
             <div>
-                <div>
+                <div className='passenger-container'>
                     <div>
                         <div>
                             <strong>Note: </strong> Please add passengers individually

@@ -45,7 +45,7 @@ export default function Login(props) {
                     
                 </div>
                     <div className='main-content'>
-                                    <div class="login-container">
+                                    <div className="login-container">
                                     <div>
                         <h1>
                             Login
@@ -91,7 +91,7 @@ export default function Login(props) {
                                                                 className='text-danger'
                                                             />
                                                         </div>
-                                                        <div class="remember-forgot">
+                                                        <div className="remember-forgot">
                                                  <Link to="/forgetPassword">
                                                     
                                                 <a  href="#">Forgot password</a>
@@ -100,7 +100,7 @@ export default function Login(props) {
                                                 </div>
 
                                                         <div className='card-footer'>
-                                                            <button class='login-btn'
+                                                            <button className='login-btn'
                                                                 type='submit'
                                                             >Login</button>
                                                         </div>
@@ -113,7 +113,7 @@ export default function Login(props) {
                                 <div>
                                     
                                        
-                                        <div class="signup-link">
+                                        <div className="signup-link">
                                             Don't have an account? &nbsp;
                                             <Link className='card-link' to="/register">
                                              <a href="#">Sign up</a>

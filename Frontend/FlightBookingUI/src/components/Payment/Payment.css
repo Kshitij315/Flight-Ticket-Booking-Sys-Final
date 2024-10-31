@@ -1,49 +1,70 @@
 
 
-.payment-card{
+.payment-container{
 
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+           box-sizing: border-box;
+          
+             justify-content: center; 
+            align-items: center;    
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+           
 }
-.payment-container {
-
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    margin-top: 1em;
-    margin-bottom: 2em ;
-   
-    
-    
-}
-
-
 
 .payment-container h4{
-    margin-top: 0;
-    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+    
     text-align: center;
-    font-size:24px;
+     margin-top: 0;
+    margin-bottom: 10px; 
+    padding-bottom:2px;
     border-bottom: 2px solid #4285f4;
 }
 
-
-
-.card-icon{
-   
+.card-icons{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 1em;
+    gap: 25px;
+    padding-bottom: 20px;
 }
-.card-icon img{
+.card-icons img{
+    
     width: 50px;
-    height: 50px;
-    display: block;
+    height: auto;
+    display: flex;
+    
 }
+.payment-button button{
+    width: 60%;
+    padding: 6px;
+    background-color: #196bef;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.payment-button button:hover{
+    background-color: #0a74de;
+}   
+
+
+
+
+
+
+
+
 .card-details label{
     /* display: block; */
     margin-bottom: 2px;
@@ -55,51 +76,6 @@
 
 }
 
-
-.expiry{
-
-    display: flex;
-    gap:10px;
-    
-}
-
-.month-input{
-    width: 100%;
-    padding: 8px;
-     margin-bottom: 10px;
-    box-sizing: border-box; /* Smaller input size */
-}
-
-.year-input {
- width: 100%;
- padding: 8px;
-margin-bottom: 10px;
-box-sizing: border-box; /* Larger input size */
-}
-.expiry .month-input , .expiry .year-input {
-    width: calc(50% - 2.5px);
-}
-
-.expiry-security .security{
-
-    width: 100%;
-    padding: 8px;
-     margin-bottom: 10px;
-    box-sizing: border-box;
-}
-.expiry-security span{
-    font-size: 20px;
-    align-items: center;
-    padding-top: .4em;
-}
-.card-footer .subscribe{
-
-    opacity: 1; /* Ensure it is fully visible */
-    visibility: visible; /* Ensure it is visible */
-    background-color: #007bff; 
-    color: white; /* Example text color */
-    margin-bottom: 2em;
-}
 
 
 

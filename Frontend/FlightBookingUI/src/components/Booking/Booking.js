@@ -78,7 +78,7 @@ export default function Booking(props) {
         <div className='home'>
             <div className="main-content">
             <div className="booking-container"> 
-            <h1 class="form-title">Book your tickets</h1>
+            <h1 className="form-title">Book your tickets</h1>
                 <div>
                 </div>
                 <div>

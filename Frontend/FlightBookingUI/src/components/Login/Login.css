@@ -44,6 +44,10 @@ h1 {
     align-items: center;
     margin-bottom: 15px;
     font-size: 14px;
+    
+}
+.remember-forgot a:hover{
+text-decoration: underline;
 }
 .signup-link {
     text-align: center;

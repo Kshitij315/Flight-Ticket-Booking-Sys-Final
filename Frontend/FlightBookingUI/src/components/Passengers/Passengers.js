@@ -97,7 +97,7 @@ export default function Passengers() {
                                                                     {values.elements && values.elements.length > 0 ? (
                                                                         values.elements.map((elements, index) => (
                                                                             <tr key={index}>
-                                                                                {elements.id= index + 1}
+                                                                               <td>{elements.id= index + 1}</td> 
                                                                                 <td><Field name={`elements[${index}].pname`} type="text" /><ErrorMessage name={`elements[${index}].pname`} component="div" /></td>
                                                                                 <td><Field name={`elements[${index}].gender`} as="select">
                                                                                     <option value="Male">Male</option>

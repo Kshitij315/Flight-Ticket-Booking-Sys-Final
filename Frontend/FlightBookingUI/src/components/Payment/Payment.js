@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import BookingService from '../../services/BookingService';
 import { FaCcAmex, FaCcMastercard, FaCcVisa } from 'react-icons/fa6';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
-import './Payment.css'
-import mastercard from  '../../assets/mastercardlogo.png'
-import visa from '../../assets/visalogo.png'
+import mastercard from '../../assets/mastercardlogo.png';
+import visacard from '../../assets/visalogo.png';
 import creditcard from '../../assets/creditcard.png'
-import { BiFontSize } from 'react-icons/bi';
-
-
-
+import './Payment.css';  
 
 export default function Payment() {
     const [ticketNumber, setticketNumber] = useState(0);
@@ -40,22 +36,20 @@ export default function Payment() {
     };
     return (
         <div className='home'>
-            <div className='payment-card'>
-            <div className="payment-container">
+            <div className='payment-container'>
+            <div>
                 <h4>Confirm Payment</h4>
-                <div className='card-icon'>
-                    
-                        <img src={mastercard} width={50} height={10}/> 
-                        <img src={visa}/>
-                        <img src={creditcard}/>
-
+                
+                <div className='card-icons'>
+                    <img src={mastercard} alt="mastercard-logo"/>
+                    <img src={visacard} alt="visacard-logo" />
+                    <img src={creditcard} alt="creditcard-logo"/>
                 </div>
-               
+            </div>
             <Formik
                 initialValues={{
                     cnumber: '',
-                    exp1: '',
-                    exp2:'',
+                    exp: '',
                     cvc: '',
                     name: ''
                 }}
@@ -86,8 +80,9 @@ export default function Payment() {
                 }}
             >
                 {({ error, touched }) => (
+                    
                     <Form>
-                        <div className='card-details'>
+
                         <div>
                             <label htmlFor='cc-number'>
                                 CARD NUMBER
@@ -97,48 +92,38 @@ export default function Payment() {
                         </div>
                         <br />
                         <div>
-                        <label htmlFor='holder-name'>
+                            <label htmlFor='holder-name'>
                                 CARD HOLDER NAME
                             </label>
-                            <Field name='name' type='text' placeholder='Enter Name on the card' />
+                            <Field name='name' type='text' placeholder='Enter Card Holder name' />
                             < ErrorMessage name='name' component='div' />
-                            {/* */}
                         </div>
                         
-                       <br/>
-                       <div className="expiry-security">
-                        <label htmlFor='cc-exp'> EXPIRY DATE </label>
-                        
-                            <div className='expiry'>
-                            <Field name='exp1'  placeholder="MM"  type='month' className='month-input' />
-                            <ErrorMessage name='exp'  placeholder="YYYY" component='div'/>
-                           
-                            <span> /</span>
-                            <Field name='exp2'  placeholder="YY" type='year' className='year-input'/>
-                            <ErrorMessage name='exp' component='div'  />
-                            </div>
-                            <br/>
-                            <label htmlFor='cc-cvc'> CARD CVV </label>
-                            <Field name='cvc' type='password' placeholder='***' className='security'/>
-                            <ErrorMessage name='cvc' component='div'/>
-                            
-                            </div>
-                            {/*  /> */}
-                        
+                        <div>
+                            <label htmlFor='cc-exp'>
+                                CARD EXPIRY
+                            </label>
+                            <Field name='exp' type='text' placeholder='MM/YYYY' />
+                            <ErrorMessage name='exp' component='div' />
+                        </div>
                         <br />
-            
+                            <div>
+                            <label htmlFor='cc-cvc'>
+                                CARD CVV
+                            </label>
+                            <Field name='cvc' type='text' placeholder='***' />
+                            <ErrorMessage name='cvc' component='div' />
                         </div>
-                        
-                        <div className='card-footer'>
-                            {/* <Link to='/ticket'> */}
-                            <button type='submit' className='subscribe btn btn-primary btn-block shadow-sm'><b>Pay Now</b></button>
-                            {/* </Link> */}
+                        <div className='payment-button'>
+                        <div>
+                            <button type='submit'>Make Payment</button>
+                        </div>
                         </div>
                     </Form>
+                    
                 )}
             </Formik>
-        </div>
-        </div>
+            </div>
         </div>
 
     )

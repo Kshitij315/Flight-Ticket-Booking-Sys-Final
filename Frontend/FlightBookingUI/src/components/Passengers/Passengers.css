@@ -6,8 +6,9 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    max-width: 85%;
+    max-width: 65%;
     margin:auto;
+
    
 }
 .form-title{
@@ -19,6 +20,7 @@
             margin-bottom: 30px; 
             padding-bottom: 10px;
             border-bottom: 2px solid #4285f4;
+            
      
 }
 

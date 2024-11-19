@@ -7,6 +7,7 @@ import printstyle from "./Ticket.module.css";
 import { CgEnter } from "react-icons/cg";
 import { RxMargin } from "react-icons/rx";
 import { BlockUI } from "primereact/blockui";
+import { ref } from "yup";
 
 export default function Ticket() {
   const [ticket, setTicket] = useState({});
@@ -99,7 +100,6 @@ export default function Ticket() {
     contentRef,
   });
 
-
   return (
     
     <div className={printstyle.ticketcontainer}>
@@ -109,7 +109,7 @@ export default function Ticket() {
       
       <button type="button"  className="btn btn-primary btn-sm" onClick={onMail}><b>Mail My Ticket</b></button>
       </div>
-  <div className={printstyle.ticket}>
+  <div className={printstyle.ticket} ref={contentRef}>
           <span className={printstyle.airline}>BookMyFlight.com</span>
           <span className={printstyle.boarding}>
             Boarding: {ticket?.booking?.flight?.source}

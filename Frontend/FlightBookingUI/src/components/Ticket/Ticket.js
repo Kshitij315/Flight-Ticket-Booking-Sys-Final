@@ -104,10 +104,10 @@ export default function Ticket() {
     
     <div className={printstyle.ticketcontainer}>
       <div className={printstyle.ticketbuttons}>
-      <button type="button" className="btn btn-primary btn-sm"><b>Print the ticket</b></button>
+      <button type="button"  onClick={reactToPrintfn} className="btn btn-primary btn-sm"><b>Print the ticket</b></button>
       <div><br/></div>
       
-      <button type="button" className="btn btn-primary btn-sm" onClick={onMail}><b>Mail My Ticket</b></button>
+      <button type="button"  className="btn btn-primary btn-sm" onClick={onMail}><b>Mail My Ticket</b></button>
       </div>
   <div className={printstyle.ticket}>
           <span className={printstyle.airline}>BookMyFlight.com</span>

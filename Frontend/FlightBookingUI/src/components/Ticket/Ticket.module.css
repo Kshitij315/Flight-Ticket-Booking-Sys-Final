@@ -1,9 +1,46 @@
+
+.ticketcontainer{
+
+    position: relative;
+    
+}
+.button-example{
+
+    overflow: auto;
+}
+
+.ticketbuttons{
+    position: absolute ;
+    margin-top: 16%;
+    right: 70px;
+    width: 20%;
+    padding-top:10px;
+    left: auto;
+    display: block;
+    gap: 10px;
+    height: 8vh;
+    
+    
+}
+
+
+
+
+
 .box {
     position: absolute;
-    top: -webkit-calc(35% - 125px);
+    top: -webkit-calc(35% - 300px);
     left: calc(50% - 300px);
     left: -webkit-calc(50%);
+    
+    
 }
+
+
+/* new code */
+
+
+
 
 .ticket {
     width: 600px;
@@ -13,6 +50,10 @@
     box-shadow: 0 0 100px #aaa;
     border-top: 1px solid #c0392b;
     border-bottom: 1px solid #c0392b;
+    position: relative;
+    top:175px;
+    margin-left: 29%;
+    margin-bottom: 14em;
 }
 
 .left {
@@ -98,10 +139,12 @@
     position: absolute;
     top: 10px;
     left: 10px;
+
     font-family: Arial Narrow, Arial;
     font-weight: bold;
     font-size: 14px;
-    color: #999;
+    color: #999; 
+    
 }
 
 .name span {

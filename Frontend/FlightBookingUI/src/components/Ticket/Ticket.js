@@ -4,6 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactToPrint, { useReactToPrint } from "react-to-print";
 import printstyle from "./Ticket.module.css";
+import { CgEnter } from "react-icons/cg";
+import { RxMargin } from "react-icons/rx";
+import { BlockUI } from "primereact/blockui";
 
 export default function Ticket() {
   const [ticket, setTicket] = useState({});
@@ -96,16 +99,17 @@ export default function Ticket() {
     contentRef,
   });
 
+
   return (
-    <div style={{ height: "700px", paddingTop: "300px" }}>
-      <div>
-        <button onClick={reactToPrintfn}>Print The Ticket</button>
+    
+    <div className={printstyle.ticketcontainer}>
+      <div className={printstyle.ticketbuttons}>
+      <button type="button" className="btn btn-primary btn-sm"><b>Print the ticket</b></button>
+      <div><br/></div>
+      
+      <button type="button" className="btn btn-primary btn-sm" onClick={onMail}><b>Mail My Ticket</b></button>
       </div>
-      <div>
-        <button onClick={onMail}>Mail My Ticket</button>
-      </div>
-      <div className={printstyle.box} ref={contentRef}>
-        <div className={printstyle.ticket}>
+  <div className={printstyle.ticket}>
           <span className={printstyle.airline}>BookMyFlight.com</span>
           <span className={printstyle.boarding}>
             Boarding: {ticket?.booking?.flight?.source}
@@ -199,7 +203,9 @@ export default function Ticket() {
           </div>
           <div className={printstyle.barcode}></div>
         </div>
-      </div>
-    </div>
+        </div>
+        
+
   );
+
 }

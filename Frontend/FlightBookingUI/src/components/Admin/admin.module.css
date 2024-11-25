@@ -1,0 +1,162 @@
+.admin_main {
+    padding-top: 10rem;
+    
+}
+
+.loader_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80dvh;
+}
+
+.loader {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 3px;
+    width: 90px;
+    height: 90px;
+}
+
+.loader>div {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(225, 50%, 48%);
+    transform-origin: center center;
+    animation: loader 2s infinite linear;
+    box-shadow: 6px 5px 10px hsl(225, 56%, 59%);
+}
+
+.loader>div:nth-of-type(1),
+.loader>div:nth-of-type(5),
+.loader>div:nth-of-type(9) {
+    animation-delay: 0.4s;
+}
+
+.loader>div:nth-of-type(2),
+.loader>div:nth-of-type(6) {
+    animation-delay: 0.2s;
+}
+
+.loader>div:nth-of-type(9) {
+    animation-delay: 0.8s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(1.0);
+    }
+
+    80% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(0.0);
+    }
+
+
+
+}
+
+.container{
+
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    
+    
+
+}
+.cardtitle{
+    text-align: center;
+    
+}
+.imgcard{
+    width:500px;
+    height:400px;
+}
+
+.buttonblue{
+
+    background-color: #4285f4;
+    color: #ffffff;
+    
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    margin-left: 16%;
+    margin-top: 1em;
+    
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonblue:hover{
+
+    background-color: #357ae8;
+}
+
+.buttonblue:active{
+
+ background-color: #2e62d0;
+}
+
+
+.buttoncyan{
+
+    background-color: #00acc1;
+    color: #ffffff;
+    
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    margin-left: 22%;
+    
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttoncyan:hover{
+
+    background-color: #12cde6;
+    
+}
+
+.buttoncyan:active{
+
+ background-color: #02b3a1;
+}
+
+.buttongreen{
+
+    background-color: #4caf50;
+    color: #ffffff;
+    
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    margin-left: 20%;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttongreen:hover{
+
+    background-color: #388e3c;
+}
+
+.buttongreen:active{
+
+ background-color: #2e7d32;
+}
+
+
+
+
+
+

@@ -7,7 +7,7 @@ import { FaPinterest } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer" id="myfooter">
             <div className="sectionContainer container grid">
                 <div className="gridOne">
                     <div className="logoDiv">

@@ -134,6 +134,9 @@ export default function AddFlight() {
                         </div>
                         <div>
                             <button type='submit'>Submit</button>
+                            <div>
+                                <br/>
+                            </div>
                             <button type='reset'>Reset</button>
                         </div>
                     </Form>

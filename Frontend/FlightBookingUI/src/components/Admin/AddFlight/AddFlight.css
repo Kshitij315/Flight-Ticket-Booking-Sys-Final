@@ -6,6 +6,17 @@ min-height: 100vh; /* Ensures the container fills the viewport */
      /* Light background color */
 }
 
+.schedule-container h1{
+    color: #333;
+    font-size: 22px;
+    
+    text-align: center;
+     margin-top: 0;
+    margin-bottom: 10px; 
+    padding-bottom:2px;
+    border-bottom: 2px solid #4285f4;
+}
+
 .schedule-form{
     display: flex;
     flex-direction: column;

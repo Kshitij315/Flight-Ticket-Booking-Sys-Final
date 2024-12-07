@@ -57,7 +57,7 @@ export default function Admin() {
                     height:'100%',
                     boxShadow:5}} >
               <CardMedia
-             sx={{ height: 290 }}
+             sx={{ height: 290 ,border: '2px solid #e0e0e0'}}
             image={travel}
             title="pilot-image"/>
             <CardContent>
@@ -98,7 +98,7 @@ export default function Admin() {
             height: '100%',
             boxShadow:5}}>
                 <CardMedia
-                sx={{height:290 }}
+                sx={{height:290 ,border: '2px solid #e0e0e0'}}
                 image={schedule}
                 title="plane-gif"/>
                 
@@ -140,7 +140,7 @@ export default function Admin() {
             justifyContent: 'space-between',
             height: '100%',
             boxShadow:5}}>
-                <CardMedia  sx={{height:290
+                <CardMedia  sx={{height:290,border: '2px solid #e0e0e0'
                 }}
                 image={userlist}
                 title="plane"

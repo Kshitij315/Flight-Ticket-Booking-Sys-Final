@@ -5,7 +5,16 @@ import { RxPadding } from "react-icons/rx";
 import travel from "../../assets/travel.png"
 import schedule from "../../assets/plane.gif"
 import userlist from "../../assets/plane.png"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CardActions from '@mui/material/CardActions';
+import {Button,Grid2} from '@mui/material';
+
+
+
+import { Typography } from "@mui/material";
+
 
 
 export default function Admin() {
@@ -38,92 +47,127 @@ export default function Admin() {
         </div>
       ) : (
         
-          <div className={admin.container}>
-          {/* admincard card */}
-          <div className = "row">
-          <div className="col-md-4 justify-content:center">
-            <div className="card">
-            <img 
-            src={travel}
-              alt="Flight attendant with small airplane icon"
-            />
-            <h5 className={admin.cardtitle}>Welcome Admin</h5>
-            <p className="card-subtitle">
-              "Unlock the skies and soar to new heights with our website's
-              exhilarating flight simulation feature!"
-            </p>
-            <div>
-            <Link to={"/addFlight"}>
-            <button
-              className={admin.buttonblue}
-              
-            >
-              ADD FLIGHTS
-            </button>
-            </Link>
-            </div>
-          </div>
-          </div>
+        <Grid2 container spacing={3} sx={{ padding: 2, justifyContent: 'center',marginTop:2 }}>
 
-          {/* captain card */}
-          <div className="col-md-4">
-          <div className="card" >
-            <img
-              src={schedule}
-              alt="Pilot with sunglasses in uniform"
-            />
-            <h5 className={admin.cardtitle}>Welcome Captain Admin</h5>
-            <p className="card-subtitle">
-              "Embark on thrilling airborne adventures with our website's
-              all-inclusive flight simulations in just one line!"
-            </p>
-            <p className="card-description">
-              You can View All flights Shedules and Modify and Delete Schedules.
-            </p>
-            <div>
+          <Grid2 item xs={12} sm={4} md={4}>
+          <Card sx={{ maxWidth: 345,
+                      display: 'flex',
+                      flexDirection: 'column',
+                     justifyContent: 'space-between',
+                    height:'100%',
+                    boxShadow:5}} >
+              <CardMedia
+             sx={{ height: 290 }}
+            image={travel}
+            title="pilot-image"/>
+            <CardContent>
+            <Typography variant="h5"  align="center">
+                    <h5>Welcome Admin</h5>
+                    <p> "Unlock the skies and soar to new heights with our website's exhilarating flight simulation feature!"</p>
+                    <p>You can Add schedules for Flights, Modify and Delete Schedules.</p>
+                </Typography>
+            </CardContent>
+                <CardActions sx={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '10px'
+                }}>
+               
+                       
+                        <Link to='/addFlight'>
+                        
+                        <Button size="large" variant="contained" align='center'>
+                            Add Flight
+                        </Button> 
 
-            <Link to={"/allFlights"}>
-            <button
-              className={admin.buttongreen}
-           
-            >
-              ALL FLIGHTS
-            </button>
-            </Link>
-            </div>
+                        
+                        
+                        
+                       
+                        </Link>
+                    
+                </CardActions>
+            </Card>
+            </Grid2>
+
+            <Grid2 item xs={12} sm={4} md={4}>
+            <Card sx={{ maxWidth: 345,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%',
+            boxShadow:5}}>
+                <CardMedia
+                sx={{height:290 }}
+                image={schedule}
+                title="plane-gif"/>
+                
+                <CardContent>
+                  <Typography variant="h5"  align="center">
+
+                   <h5>Welcome Captain Admin</h5>
+                    <p>"Embark on thrilling airborne adventures with our website's all-inclusive flight simulations in just one line!",You can View All flights Shedules and Modify and Delete Schedules</p>
+                    
+
+                  </Typography>
+                    
+                </CardContent>
+                <CardActions
+                sx={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '10px'
+                }}
+                >
+
+                <Link to="/allFlights">
+                <Button color="secondary" size="large" variant="contained" align='center'>
+                  All Flights</Button></Link>
+
+                </CardActions>
+                
+
+                        
+                   
+            </Card>
             
-            
-          </div>
-          </div>
+            </Grid2>
 
-          {/* User list card */}
-          <div className="col-md-4">
-          <div className="card">
-            <img src={userlist} alt="Blue airplane icon"/>
-            <h5 className={admin.cardtitle}>Welcome</h5>
-            <p className="card-subtitle">
-              "Access your User List effortlessly with a single click on our
-              website."
-            </p>
-            <p className="card-description">
-              You Can View All User List register on your website from Here
-              easily.
-            </p>
-            <div>
+            <Grid2 item xs={12} sm={4} md={4}>
+            <Card sx={{maxWidth: 345,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%',
+            boxShadow:5}}>
+                <CardMedia  sx={{height:290
+                }}
+                image={userlist}
+                title="plane"
+                />
+                <CardContent>
+                  <Typography variant="h5"  align="center">
+                    <h5>Welcome</h5>
+                    <p>"Access your User List effortlessly with a single click on our website."</p>
+                    <p>You Can View All User List register on your website from Here easily.</p>
+                </Typography>
+                </CardContent>
+                <CardActions
+                sx={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '10px'
+                }}
+                >
+                    <Link to="/userlist"><Button color="success" size="large" variant="contained" align='center'>User List</Button></Link>
+                    
 
-            <Link to={"/userList"}>
-            <button
-              className={admin.buttoncyan}>
-              
-              USER LIST
-            </button></Link>
-            </div>
-          
-          </div>
-          </div>
-          </div>
-          </div>
-          
+                </CardActions>
+               
+                      
+            </Card>
+            </Grid2>
+            </Grid2>
           
         
       )}

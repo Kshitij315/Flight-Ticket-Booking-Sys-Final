@@ -1,0 +1,22 @@
+.schedule-container{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh; /* Ensures the container fills the viewport */
+     /* Light background color */
+}
+
+.schedule-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form fields */
+    padding: 2rem;
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width:600px; /* Fixed width */
+}
+
+.schedule-form button{
+    width:100%;
+}

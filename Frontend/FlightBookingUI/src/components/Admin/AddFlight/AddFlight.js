@@ -4,6 +4,7 @@ import FlightServiceRest from '../../../services/FlightServiceRest';
 import Swal from 'sweetalert2';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import '../AddFlight/AddFlight.css';
 
 export default function AddFlight() {
     const history = useNavigate();
@@ -35,7 +36,7 @@ export default function AddFlight() {
 
     return (
         <div className='home'>
-            <div>
+            <div className='schedule-container'>
                 <Formik
                     initialValues={{
                         source: "",
@@ -65,9 +66,10 @@ export default function AddFlight() {
                     }
                     onSubmit={(values) => onSave(values)}
                 >
-                    <Form>
+
+                    <Form className='schedule-form'>
                         <h1>Add Flight Schedule</h1>
-                        <div>
+                        <div >
                             <div>
                                 <label htmlFor='source'>Source</label>
                                 <Field as="select" name="source">

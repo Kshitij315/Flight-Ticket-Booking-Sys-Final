@@ -30,6 +30,7 @@ export default function Admin() {
     }
   }, []);
   return (
+    
     <div className={admin.admin_main}>
       {isLoading ? (
         <div className={admin.loader_main}>
@@ -61,10 +62,13 @@ export default function Admin() {
             image={travel}
             title="pilot-image"/>
             <CardContent>
-            <Typography variant="h5"  align="center">
-                    <h5>Welcome Admin</h5>
+            <Typography variant="h5" component="div" align="center">
+              <div>
+              <h5>Welcome Admin</h5>
                     <p> "Unlock the skies and soar to new heights with our website's exhilarating flight simulation feature!"</p>
                     <p>You can Add schedules for Flights, Modify and Delete Schedules.</p>
+              </div>
+                    
                 </Typography>
             </CardContent>
                 <CardActions sx={{
@@ -103,10 +107,13 @@ export default function Admin() {
                 title="plane-gif"/>
                 
                 <CardContent>
-                  <Typography variant="h5"  align="center">
+                  <Typography variant="h5"  component="div" align="center">
+                <div>
 
-                   <h5>Welcome Captain Admin</h5>
-                    <p>"Embark on thrilling airborne adventures with our website's all-inclusive flight simulations in just one line!",You can View All flights Shedules and Modify and Delete Schedules</p>
+                <h5>Welcome Captain Admin</h5>
+                <p>"Embark on thrilling airborne adventures with our website's all-inclusive flight simulations in just one line!",You can View All flights Shedules and Modify and Delete Schedules</p>
+                </div>
+                   
                     
 
                   </Typography>
@@ -146,10 +153,13 @@ export default function Admin() {
                 title="plane"
                 />
                 <CardContent>
-                  <Typography variant="h5"  align="center">
+                  <Typography variant="h5"component= "div" align="center">
+                    <div>
                     <h5>Welcome</h5>
                     <p>"Access your User List effortlessly with a single click on our website."</p>
                     <p>You Can View All User List register on your website from Here easily.</p>
+                    </div>
+                   
                 </Typography>
                 </CardContent>
                 <CardActions
@@ -172,5 +182,6 @@ export default function Admin() {
         
       )}
     </div>
+    
   );
 }

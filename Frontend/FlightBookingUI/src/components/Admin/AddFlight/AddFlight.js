@@ -111,15 +111,16 @@ export default function AddFlight() {
                                 <Field type="date" name="travelDate" />
                                 <ErrorMessage name="travelDate" component="div" />
                             </div>
-                            <div>
+                            <div className='input-time'>
                                 <label htmlFor="arrivalTime">Takeoff Time</label>
-                                <Field type="time" name="arrivalTime" />
+                                <Field  type="time" name="arrivalTime" />
                                 <ErrorMessage name="arrivalTime" component="div" />
-                            </div>
-                            <div>
+                            
+                            
                                 <label htmlFor="departureTime">Landing Time</label>
                                 <Field type="time" name="departureTime" />
                                 <ErrorMessage name="departureTime" component="div" />
+                            
                             </div>
                             <div>
                                 <label htmlFor="price">Fare</label>
@@ -132,7 +133,7 @@ export default function AddFlight() {
                                 <ErrorMessage name="availableSeats" component="div" />
                             </div>
                         </div>
-                        <div>
+                        <div className='schedule-btn'>
                             <button type='submit'>Submit</button>
                             <div>
                                 <br/>

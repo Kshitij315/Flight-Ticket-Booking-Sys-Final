@@ -31,3 +31,38 @@ min-height: 100vh; /* Ensures the container fills the viewport */
 .schedule-form button{
     width:100%;
 }
+
+
+
+.input-time input[type="time"]{
+    padding: 0px 100px 10px;
+    margin-right: 50%;
+    margin-bottom: 5px;
+    font-size: medium !important;
+
+
+}
+
+.schedule-btn button{
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 25px;
+}
+
+.schedule-btn button:hover{
+    background-color: #3f51b5;
+}
+.schedule-form input[type="number"]{
+
+    padding: 0px 12px 10px;
+    font-size: medium;
+    font-weight: bold white;
+    margin-right: 50%;
+    margin-bottom: 5px;
+}
